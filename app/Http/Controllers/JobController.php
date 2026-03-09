@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AllJob;
 use Illuminate\Http\Request;
 
 class JobController extends Controller
@@ -11,7 +12,8 @@ class JobController extends Controller
      */
     public function index()
     {
-        //
+        $jobs = AllJob::all();
+        return view('job.index', ['jobs' => $jobs]);
     }
 
     /**
@@ -33,15 +35,15 @@ class JobController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(AllJob $job)
     {
-        //
+        return view('job.show', compact('job'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(AllJob $job)
     {
         //
     }

@@ -1,3 +1,6 @@
+<div>
+    <!-- No surplus words or unnecessary actions. - Marcus Aurelius -->
+</div>
 <!doctype html>
 <html>
 
@@ -7,10 +10,8 @@
     @vite('resources/css/app.css')
 </head>
 
-<body>
-    <h1 class="text-4xl text-red-500">
-        Hello world!
-    </h1>
+<body class="mx-auto mt-10 max-w-2xl bg-slate-200 text-slate-700">
+    {{ $slot }}
 </body>
 
 </html>
